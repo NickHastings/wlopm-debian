@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	install -D wlopm   debian/wlopm/usr/bin/wlopm
+	install -D wlopm.1 debian/wlopm/usr/share/man/man1/wlopm.1
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f wlr-output-power-management-unstable-v1.c wlr-output-power-management-unstable-v1.h xdg-output-unstable-v1.c xdg-output-unstable-v1.h *.o

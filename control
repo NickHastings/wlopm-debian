@@ -1,0 +1,14 @@
+Source: wlopm
+Section: x11
+Priority: optional
+Maintainer: Nick Hastings <nicholaschastings@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0.1
+Homepage: https://git.sr.ht/~leon_plickat/wlopm
+
+Package: wlopm
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Wayland output power management
+ Turns displays on or off using zwlr-output-power-management-v1.
